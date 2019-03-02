@@ -29,6 +29,13 @@ main = hakyll $ do
                          >>= loadAndApplyTemplate "templates/default.html" progCtx 
                          >>= relativizeUrls
 
+    match "maths.html" $ do
+        route idRoute
+        compile $ do 
+            getResourceBody >>= applyAsTemplate defaultContext
+                            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                            >>= relativizeUrls
+
     create ["blog.html"] $ do
         route idRoute
         compile $ do 
