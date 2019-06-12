@@ -2,6 +2,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
+import           Text.Pandoc
 --------------------------------------------------------------------------------
 
 main :: IO ()
@@ -15,7 +16,7 @@ main = hakyll $ do
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ compiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx >>= relativizeUrls
 
@@ -64,9 +65,14 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateBodyCompiler
 
-
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+compiler :: Compiler (Item String)
+compiler = pandocCompilerWith defaultHakyllReaderOptions pandocOptions
+
+pandocOptions :: WriterOptions
+pandocOptions = defaultHakyllWriterOptions {writerHTMLMathMethod = MathJax ""}
