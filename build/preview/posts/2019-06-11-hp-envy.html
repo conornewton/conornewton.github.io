@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Conor Newton - Linux on a HP-envy 13-ah0003na</title>
+        <link rel="stylesheet" href="../css/default.css" />
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../">Conor Newton</a>
+            </div>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../programming.html">Programming</a>
+                <a href="../maths.html">Mathematics</a>
+                <a href="../blog.html">Blog</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            <article>
+    <section class="header">
+        Posted on June 11, 2019
+        
+    </section>
+    <section>
+        <h1 id="arch-linux-on-a-hp-envy-13-ah0003na">Arch Linux on a HP-Envy 13-ah0003na</h1>
+<p>The following are my results of using arch linux. I will continuously update this to reflect my current understanding.</p>
+<p>Any innaccuracies or questions drop me a message at conor@conornewton.uk</p>
+<p>The following works out of the box fine:</p>
+<ul>
+<li>WIFI</li>
+<li>Touchpad (libinput driver works fine)</li>
+<li>Webcam</li>
+<li>Micro SD card reader</li>
+<li>USB3 (I have not tested this with HDMI adapters and etc. But I believe it would work fine.)</li>
+</ul>
+<h2 id="bluetooth">Bluetooth</h2>
+<p>I installed the packages <em>bluez</em> and <em>bluez-util</em>. Then I had to enable bluetooth service with systemctl as follows. The drivers packaged with the kernel work fine.</p>
+<h2 id="graphics">Graphics</h2>
+<p>Graphics is fairly complicated. Take a look at the nvidia optimus article on the arch wiki. I need to play with this a bit more.</p>
+<h2 id="touchscreen">Touchscreen</h2>
+<p>The touchscreen does not work out of the box, i have yet to get this to work.</p>
+<h2 id="sound">Sound</h2>
+<p>After installing pulse audio and unmuting the master channel the sound works out of the left and right speakers but the central one.</p>
+<h2 id="fingerprint-scanner">Fingerprint Scanner</h2>
+<p>Works fine after installing the package libfinput. I’m not sure how much i will use this.</p>
+    </section>
+</article>
+
+        </main>
+
+        <footer>
+            <a href="https://www.github.com/conornewton">Github</a>
+            <a href="https://www.linkedin.com/in/conor-newton-3b1174107/">LinkedIn</a>
+            <a href="https://instagram.com/conor__newton">Instagram</a>
+        </footer>
+    </body>
+</html>

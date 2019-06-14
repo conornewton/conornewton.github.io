@@ -3,7 +3,7 @@ title: Linux on a HP-envy 13-ah0003na
 description: this is my personal documentation on linux support for my laptop
 ---
 
-# Linux on a HP-Envy 13-ah0003na
+# Arch Linux on a HP-Envy 13-ah0003na
 
 The following are my results of using arch linux. I will continuously update this to reflect my current understanding.
 
