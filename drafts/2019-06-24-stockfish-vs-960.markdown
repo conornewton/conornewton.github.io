@@ -1,0 +1,7 @@
+# Stockfish vs Chess960
+
+In standard chess, the starting position only gives a small advantage to white. Stockfish evaluates this to be worth about a third of a pawn. This leads to a fairly balanced game.
+
+In a variant of chess known as Chess960 or Fischer Random Chess, the position of the pieces start in a randomise position on the back row whilst remaning symmetrical for each player.
+
+I was curious to find out how balanced the starting positions are in Chess960, possibly giving white a larger advantage.

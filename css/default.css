@@ -2,10 +2,14 @@ html {
   font-size: 62.5%;
 }
 
+@font-face{
+    font-family:"Apple Garamond";
+    src:url("./fonts/AppleGaramond-Light.ttf");
+}
+
 body {
   font-size: 1.6rem;
-  font-family: "Lucida Console", Monaco, monospace;
-  background-color: #c6c6c6;
+  background-color: white;
   color: #000;
 }
 
